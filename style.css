@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  /*of the background image  */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(bgg.png);
+  background-size:cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+body::before {
+  /*putting filter on background (for example the hue color)*/
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(170, 115, 12, 0.164);
+}
+
+.frame {
+  /*frame of overall size and editaton*/
+  height: 400px;
+  width: 300px;
+  backdrop-filter: blur(3.5px);
+  border: 1px solid rgb(179, 215, 180);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgb(162, 165, 162);
+}
+
+.login {
+  /*login at top color and size and editation */
+  font-family: fantasy;
+  font-size: 50px;
+  font-weight: lighter;
+  color: rgb(148, 210, 183);
+  margin-top: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.username,
+.password {
+  /*edit of user and pass text bubble  */
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+  position: relative;
+}
+
+.username input, /*this is where you design inside the box of user and pass*/
+.password input {
+  padding: 8px 8px 8px 15px;
+  initial-letter: blur(5px);
+  background: rgb(181, 203, 181);
+  border: none;
+  width: 100%;
+  border: 1px solid rgb(33, 76, 78);
+  border-radius: 50px;
+  font-size: 17px;
+  outline: rgb(162, 165, 162);
+  font-weight: 200;
+}
+
+.username image source,
+.password image source {
+  background: url(user.png);
+  background: url(padlock.png);
+  background-color: blueviolet;
+}
+/*color of the username word (the :: has to be close to the rest of code or it wont work*/
+.username input::placeholder,
+.password input::placeholder {
+  color: rgb(29, 56, 26);
+}
+
+.username img,
+.password img {
+  position: absolute;
+  right: 0.7rem;
+}
+
+.remember_forgot {
+  height: auto;
+  width: 90%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+.remember_forgot .remember {
+  /*remember me line */
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: rgb(213, 207, 195);
+  font-weight: bold;
+  font-size: 12px;
+  font-style: oblique;
+}
+
+.remember_forgot .remember input {
+  /*remember me adjustments of button */
+  height: 13px;
+  width: 30px;
+  margin-right: 0.4rem;
+}
+
+.remember_forgot .forgot a {
+  /*forgot password edit */
+  align-items: center;
+  font-style: oblique;
+  font-size: 12px;
+  text-decoration: dotted;
+  color: rgb(213, 199, 199);
+  font-weight: bold;
+}
+
+.log {
+  /*login button */
+  width: 40%;
+  padding: 5px;
+  margin-top: 0.5rem;
+  font-size: 15px;
+  font-weight: 300;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.reg {
+  /*margin-top helps adjust the sizing of the line and space */
+  margin-top: 1.5rem;
+  color:white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  font-weight; 200rem;
+  
+}
+.reg a {
+  /*this is for the register button */
+  font-weight: 400;
+  margin-left: 30px;
+  color: rgb(177, 222, 183);
+}
